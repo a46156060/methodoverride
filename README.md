@@ -26,11 +26,17 @@ npm install koa-methodoverride
 var app = require('koa')();
 var methodOverride = require('koa-methodoverride');
 
-app.use(methodOverride());
+app.use(methodOverride('_method'));
 
 app.listen(3000);
 ```
 
+```html
+<form method="POST" action="/resource">
+  <input type="hidden" name="_method" value="put">
+  <button type="submit">Put</button>
+</form>
+```
 
 ### License
 
