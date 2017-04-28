@@ -31,9 +31,9 @@ app.use(methodOverride('_method'));
 app.listen(3000);
 ```
 
+Example using html
 ```html
-<form method="POST" action="/resource">
-  <input type="hidden" name="_method" value="put">
+<form method="POST" action="/resource?_method=put">
   <button type="submit">Put</button>
 </form>
 ```
